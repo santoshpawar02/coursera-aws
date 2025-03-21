@@ -1,0 +1,18 @@
+Amazon EC2 instances, which provide flexibility and control in the cloud. Key points include:
+
+Provisioning: You can easily create one or multiple instances and only pay for what you use.
+Operating Systems: AWS supports various operating systems, and you select one using an Amazon Machine Image (AMI), which includes configurations and pre-installed applications.
+Instance Types: Different instance types are available based on compute, memory, and storage needs, allowing you to optimize for specific applications.
+Resizing: EC2 instances can be resized easily, enabling you to adapt to changing requirements.
+Business Impact: The flexibility and low cost of EC2 allow businesses to innovate quickly by testing configurations without the constraints of traditional hardware.
+
+
+Amazon EC2 (Elastic Compute Cloud) is a web service that provides secure and resizable compute capacity in the cloud, allowing users to provision virtual servers known as EC2 instances.
+Users can create and manage EC2 instances through various interfaces, including the AWS Management Console and Command Line Interface (CLI).
+To launch an EC2 instance, you need to define:
+Hardware specifications: CPU, memory, network, and storage.
+Logical configurations: Networking location, firewall rules, authentication, and operating system.
+Amazon Machine Image (AMI): This is a pre-configured template that includes the operating system and software needed to launch an EC2 instance. It simplifies the server setup process.
+The relationship between AMIs and EC2 instances is similar to a recipe and a cake; the AMI defines the instance, while the EC2 instance is the live application of that definition.
+AMIs can be reused to create multiple instances with the same configurations, saving time and reducing errors.
+AMIs can be found in various categories, including Quick Start AMIs, AWS Marketplace AMIs, My AMIs, and Community AMIs.

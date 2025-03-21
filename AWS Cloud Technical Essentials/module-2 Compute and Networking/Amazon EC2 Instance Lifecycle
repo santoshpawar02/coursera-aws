@@ -1,0 +1,35 @@
+Amazon EC2 instance lifecycle. Here are the key points:
+
+Provisioning and Termination: EC2 allows you to provision instances on demand and terminate them when no longer needed, charging you only for running instances.
+Instance States:
+Pending: The instance is booting up after being launched from an AMI.
+Running: The instance is active, and you are charged for it.
+Reboot: Similar to rebooting a laptop.
+Stop: Powers down the instance, allowing you to restart it later.
+Stop-Hibernate: Saves the state to memory, allowing for a quick resume without a full boot.
+Terminate: Permanently deletes the instance, similar to throwing a laptop into the ocean. Data is lost unless backed up.
+Cost Management: You are charged only for instances in the running or stopping state. You can stop instances when not in use to save costs.
+
+
+
+EC2 Instance Configuration: After selecting an operating system, you need to configure the instance type, network, and storage based on your application's demands and user base size.
+
+Instance Components: EC2 instances consist of virtual processors (vCPUs), memory, network, and sometimes storage and GPUs. The instance type indicates the performance and capacity.
+
+Instance Families: Different families are optimized for various workloads:
+
+General Purpose: Balanced resources for diverse workloads.
+Compute Optimized: High-performance processors for compute-bound applications.
+Memory Optimized: Fast performance for memory-intensive applications.
+Accelerated Computing: Uses hardware accelerators for efficient processing.
+Storage Optimized: High IOPS for large data sets.
+Networking: Instances are placed in the default Amazon VPC, which is public. For security, custom VPCs should be used as you gain experience.
+
+High Availability: It's recommended to use multiple instances across different Availability Zones to ensure application reliability.
+
+Instance Lifecycle: Instances transition through states (pending, running, stopped, terminated) with specific actions affecting billing and data retention.
+
+Pricing Options:
+On-Demand: Pay for capacity without long-term commitments.
+Reserved Instances: Discounted rates for long-term commitments.
+Spot Instances: Use unused capacity at a significant discount, but may be interrupted.

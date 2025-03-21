@@ -1,0 +1,21 @@
+importance of compute capacity for businesses, highlighting the challenges of managing on-premises servers, such as high costs, long setup times, and inflexibility. It contrasts this with the Compute as a Service model offered by AWS, which simplifies the process by providing pre-configured, secure data centers and servers ready for use.
+
+Key points include:
+
+On-premises computing requires significant time and investment.
+AWS provides a more efficient way to access compute resources.
+The course will focus on Amazon EC2 and explore other compute options like serverless compute and containers.
+
+
+Understanding Servers in the context of AWS. Here are the key points:
+
+Servers are essential for hosting applications, handling HTTP requests, and responding to clients.
+Common HTTP servers include:
+Windows: Internet Information Services (IIS)
+Linux: Apache HTTP Web Server, Nginx, Apache Tomcat
+To run an HTTP server on AWS, you need to select a compute service from the AWS Management Console.
+There are three main types of compute options in AWS:
+Virtual Machines: Emulate physical servers (e.g., Amazon EC2).
+Container Services
+Serverless Computing
+Understanding Amazon EC2 is crucial as it serves as the foundation for many AWS compute services.
