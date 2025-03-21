@@ -1,0 +1,33 @@
+AWS security and the shared responsibility model. Here are the key points:
+
+Shared Responsibility Model: Both AWS and the customer share security responsibilities. AWS secures the cloud infrastructure, while customers are responsible for securing their data and applications within that infrastructure.
+
+AWS Responsibilities:
+
+Manages the physical infrastructure (data centers, servers).
+Secures the underlying services (compute, storage, networking) from the host operating system up to the virtualization layer.
+Customer Responsibilities:
+
+Patching operating systems of virtual machines (VMs).
+Encrypting data in transit and at rest.
+Configuring firewalls and managing access controls.
+Analogy: Similar to a construction company building a secure building, where the company secures the building itself, but tenants must secure their individual apartments.
+Understanding this model is crucial for effectively using AWS services and ensuring a secure cloud environment. 
+
+
+
+AWS Responsibilities (Security of the Cloud):
+
+Protecting the infrastructure, including AWS Regions, Availability Zones, and data centers.
+Managing hardware, software, and networking components that run AWS services.
+Responsibilities vary based on the service category:
+Infrastructure Services: AWS manages the underlying infrastructure.
+Container Services: AWS manages infrastructure, operating systems, and application platforms.
+Abstracted Services: AWS operates the infrastructure and provides data protection.
+Customer Responsibilities (Security in the Cloud):
+Customers must configure services and applications securely and manage their data.
+Responsibilities also vary by service category:
+Infrastructure Services: Customers control the operating system and application platform.
+Container Services: Customers manage data encryption and protection.
+Abstracted Services: Customers are responsible for managing their data and client-side encryption.
+Understanding this model is crucial for ensuring compliance with security standards and regulations while maintaining control over data. 

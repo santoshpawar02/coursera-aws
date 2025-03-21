@@ -1,0 +1,35 @@
+IAM Roles vs. IAM Users: 
+
+IAM users have static credentials (username, password, access key ID, and secret access key).
+IAM roles do not have static credentials; they provide temporary credentials that are programmatically acquired and automatically rotated.
+Signing AWS Requests: 
+
+AWS API calls must be signed for authentication. IAM roles help EC2 instances sign requests to services like S3 without needing static IAM user credentials.
+Creating IAM Roles: 
+
+You can create roles in the AWS console, assign permissions (like S3 and DynamoDB access), and use them for various AWS services.
+Federated Users:
+IAM roles can also be used for external identity providers, allowing existing users to access AWS without creating individual IAM users.
+
+
+Lock Down the AWS Root User: 
+
+Do not share root user credentials.
+Consider protecting root user access keys.
+Enable Multi-Factor Authentication (MFA) on the root account.
+Follow the Principle of Least Privilege: 
+
+Grant only the necessary permissions for specific tasks.
+Start with minimal permissions and add more as needed.
+Use IAM Appropriately: 
+
+IAM secures access to AWS resources by managing users, groups, and roles.
+It is not for website authentication or protecting operating systems.
+Use IAM Roles When Possible: 
+
+Roles provide temporary credentials that expire, making them easier to manage than long-term user credentials.
+Consider Using an Identity Provider (IdP): 
+
+An IdP can manage employee identities, reducing the need for multiple IAM users across AWS accounts.
+Consider AWS IAM Identity Center:
+It allows users to sign in with a single credential for multiple AWS accounts and applications, simplifying user management

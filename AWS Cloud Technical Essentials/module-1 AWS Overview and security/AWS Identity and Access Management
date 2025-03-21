@@ -1,0 +1,8 @@
+User Authentication: Users need valid credentials (username and password) to log into the application.
+API Calls: The application running on Amazon EC2 must authenticate API calls to Amazon S3 for data access, requiring proper credentials.
+AWS Identity and Access Management (IAM): IAM manages user credentials and permissions within the AWS account, allowing for unique IAM users instead of using the root user for administration.
+Authentication vs. Authorization:
+Authentication verifies user identity.
+Authorization determines what actions a user can perform after logging in.
+IAM Policies: These are JSON documents that define permissions for users or groups, allowing for granular control over AWS resources.
+Best Practices: It's recommended to set up Multi-Factor Authentication (MFA) for the root user and create IAM users with appropriate permissions.

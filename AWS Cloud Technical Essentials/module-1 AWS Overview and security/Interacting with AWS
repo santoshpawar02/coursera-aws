@@ -1,0 +1,14 @@
+Physical vs. Virtual Management: Managing physical servers is straightforward, but virtual infrastructure requires logical management through the AWS API.
+Three Main Interaction Methods:
+AWS Management Console: A web-based interface that allows users to point and click to manage AWS services without needing prior knowledge.
+AWS Command Line Interface (CLI): A tool that allows users to create and configure AWS services using command syntax, which can reduce human error and improve efficiency.
+AWS Software Development Kits (SDKs): These are libraries for popular programming languages that enable developers to integrate their applications with AWS services programmatically.
+
+
+API Calls: Every action in AWS is an API call that requires authentication and authorization.
+
+AWS Management Console: A web-based interface for managing cloud resources, where you can easily create and manage services by clicking through categories like compute, database, and storage. You can also change the AWS Region from the console.
+
+AWS Command Line Interface (CLI): A tool that allows you to manage AWS services from the command line, enabling automation through scripts. This is useful for tasks that need to be performed regularly, such as collecting data from multiple servers.
+
+AWS Software Development Kits (SDKs): These are libraries for various programming languages that allow developers to integrate AWS services directly into their applications. For example, using the AWS SDK for Python to upload files to a storage service.

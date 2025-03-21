@@ -1,0 +1,23 @@
+When you create an AWS account, the email address you use becomes the root user, which has unrestricted access to all resources in your account.
+It's crucial to protect the root user to prevent unauthorized access, as it can lead to severe consequences, such as data loss or unexpected charges.
+Single-factor authentication (just a password) is not enough for security. It's recommended to enable multi-factor authentication (MFA) for the root user, which adds an extra layer of security by requiring a unique code in addition to your password.
+You should avoid using the root user for everyday tasks and instead create IAM users for regular access.
+
+
+Authentication and Authorization in AWS:
+
+Authentication: This is the process of verifying a user's identity, typically using a combination of an email address and password. It answers the question, "Are you who you say you are?" Other methods include token-based authentication and biometric data.
+
+Authorization: Once authenticated, authorization determines what actions a user can perform within AWS, such as reading, editing, or deleting resources. It answers, "What actions can you perform?"
+AWS Root User:
+
+The AWS root user is the initial identity created with complete access to all AWS services and resources. It has two sets of credentials: an email/password for the AWS Management Console and access keys for programmatic requests.
+Best Practices for AWS Root User:
+
+Use a strong password, avoid sharing credentials, and do not use the root user for everyday tasks. It's advisable to disable or delete access keys associated with the root user.
+Multi-Factor Authentication (MFA):
+
+MFA adds an extra layer of security by requiring two or more authentication methods. It combines something you know (like a password) with something you have (like a one-time passcode).
+Supported MFA Devices:
+
+AWS supports various MFA mechanisms, including virtual MFA apps, hardware devices, and U2F security keys.

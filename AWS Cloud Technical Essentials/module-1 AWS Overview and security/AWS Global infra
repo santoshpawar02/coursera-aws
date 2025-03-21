@@ -1,0 +1,19 @@
+Data Storage: Photos are uploaded to AWS to prevent loss if the local device fails.
+Redundancy: AWS uses multiple data centers (Availability Zones or AZs) connected by high-speed links to ensure data availability even if one center fails.
+Regions and AZs: A region consists of multiple AZs, and users can choose where to store their data based on compliance, latency, pricing, and service availability.
+Global Edge Network: This includes Edge locations that cache content closer to users, reducing latency for global access to applications.
+
+
+Regions: Geographic locations where AWS hosts data centers, named after their locations (e.g., Northern Virginia, Oregon). Each Region has a unique code (e.g., us-east-1 for Northern Virginia).
+
+Choosing the Right Region: Consider factors like:
+
+Latency: Proximity to users to minimize wait times.
+Price: Costs vary by Region due to local economic factors.
+Service Availability: Not all services are available in every Region.
+Data Compliance: Regulations may require data to be stored in specific locations.
+Availability Zones (AZs): Clusters of data centers within a Region, designed for redundancy and high availability. Each AZ has a code (e.g., us-east-1a).
+
+Scope of AWS Services: Services can be Region-scoped or AZ-scoped, affecting how resources are deployed and managed.
+
+Maintaining Resiliency: Best practices include using managed services and replicating workloads across multiple AZs to ensure high availability.
