@@ -1,8 +1,0 @@
-AWS Fargate, a serverless compute platform for containers that works with ECS (Elastic Container Service) and EKS (Elastic Kubernetes Service). Here are the key points:
-
-Container Orchestration: ECS or EKS manages the lifecycle of containers.
-Compute Platform: Fargate allows you to run containers without managing the underlying infrastructure.
-No Provisioning Required: You don't need to worry about provisioning, patching, or managing servers.
-Resource Definition: You define your application’s content, networking, storage, and scaling requirements.
-Cost: You pay only for the resources consumed by your applications.
-Use Cases: Fargate is suitable for microservices, batch processing, machine learning, and migrating applications to the cloud.
