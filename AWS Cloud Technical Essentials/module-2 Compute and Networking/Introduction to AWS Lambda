@@ -1,0 +1,9 @@
+Summary of AWS Lambda:
+
+AWS Lambda is a serverless compute service that allows you to run code in response to triggers without managing servers.
+You create a Lambda function by uploading your code, which runs when a specified trigger occurs (e.g., HTTP requests, file uploads to Amazon S3).
+Lambda functions are scalable and run in a managed environment, meaning AWS handles maintenance and scaling.
+You can choose the programming language, memory, CPU allocation, and permissions for your function.
+Lambda is designed for short tasks (under 15 minutes) and is not suitable for long-running processes.
+You are billed only for the compute time used, rounded to the nearest millisecond.
+An example use case is resizing images uploaded to S3, where a Lambda function is triggered upon an image upload to resize it and save it in a different location.

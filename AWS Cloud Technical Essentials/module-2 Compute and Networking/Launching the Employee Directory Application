@@ -1,0 +1,7 @@
+launch an employee directory application on an Amazon EC2 instance using the default VPC. Key steps include:
+
+Launching an EC2 Instance: Selecting the Amazon Linux 2023 AMI and the T2 micro instance type.
+Network Configuration: Using the default VPC with public internet access and enabling auto-assigned public IP.
+Security Group Settings: Configuring the firewall to allow HTTP and HTTPS traffic while disabling SSH.
+User Data Script: A Bash script is provided to download and install the application, including dependencies and environment variables for S3 and DynamoDB.
+Instance Launch: After launching, the instance is checked for status, and the application is accessed via its public IP.

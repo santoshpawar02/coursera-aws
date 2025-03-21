@@ -1,0 +1,9 @@
+understanding serverless computing. Here are the key points:
+
+Instance Management: When using Amazon EC2, you are responsible for managing your fleet of instances, including patching, scaling, and ensuring high availability by deploying instances across multiple Availability Zones (AZs).
+
+Control vs. Convenience: While EC2 provides control over your environment, it requires more management. In contrast, serverless computing abstracts the underlying infrastructure, allowing you to focus solely on your application without worrying about scaling or maintenance.
+
+Shared Responsibility Model: With serverless offerings, AWS takes on more responsibility for the underlying infrastructure, such as patching the operating system, while you remain responsible for aspects like data encryption and access management.
+
+Spectrum of Services: AWS services exist on a spectrum from convenience (e.g., AWS Lambda) to control (e.g., Amazon EC2), catering to different use cases and preferences.

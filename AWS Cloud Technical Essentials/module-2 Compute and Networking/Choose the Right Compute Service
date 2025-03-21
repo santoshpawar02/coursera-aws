@@ -1,0 +1,31 @@
+Use Case 1: Automating the process of loading inventory data into a database from an S3 upload. The recommended service is AWS Lambda due to its cost-effectiveness and ability to run code in response to triggers.
+
+Use Case 2: Migrating an application from an on-premises data center to AWS with minimal refactoring. The best option here is Amazon EC2, as it allows for easy migration of Linux-based applications and can scale based on demand.
+
+Use Case 3: Designing a new application using a microservices architecture. The recommended services are Amazon ECS or EKS, as they support quick scaling and reduce deployment risks.
+
+
+
+Play video starting at :1:46 and follow transcript1:46
+- All right, let's discuss how you could have answered this question. You could have decided to use Amazon EC2 here. You could spin up a new instance specifically for this process and write some code that polls the location of the spreadsheet for a new upload every so often. Updating the database when it finds a new file, that would work, but before I make my final answer here, I have a question. How often does new inventory get added to the database? - New inventory gets updated once a quarter. - Good to know. So it's not very often, which means this process would only run once a quarter and that does change my answer. Here's why. Amazon EC2 charges per second or per hour. So if I have an instance running all the time to serve requests that happens once per quarter, that seems like a lost opportunity to optimize for cost. I would be spending money on a resource I rarely use. It certainly would work, but it may not be the best fit for this use case. I could automate the process of starting and stopping the instance when needed. But instead, what about using AWS Lambda?
+
+
+
+Amazon EC2: When using EC2, AWS manages the physical hardware, while you handle the logical controls like the operating system, security, and scaling.
+
+Amazon ECS and EKS: These services manage container deployment and cluster management, but you still need to maintain the underlying EC2 instances.
+
+Serverless Computing: This allows you to deploy applications without managing EC2 instances. Key features include:
+
+No server management
+Automatic scaling
+Pay only for usage
+Built-in availability and fault tolerance
+AWS Fargate: A serverless compute engine for containers that manages infrastructure, allowing developers to focus on application development.
+
+AWS Lambda: Lets you run code without managing servers or containers. It automatically scales and requires no administration. Key components include:
+
+Trigger: Defines when the function runs.
+Code: The source code for the function.
+Configuration: Settings for how the function runs.
+Billing: You pay for the number of requests and execution time, making it cost-effective for short-duration functions.
