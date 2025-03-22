@@ -1,0 +1,37 @@
+networking and Virtual Private Clouds (VPCs) in AWS. Key points include:
+
+Default VPCs: AWS automatically creates default VPCs in every region, allowing users to quickly launch EC2 instances and access applications over the internet.
+Security Considerations: Resources in default VPCs are exposed to the internet, which can pose security risks.
+Custom VPCs: The course will guide you on how to build a custom VPC, which offers enhanced security and more controlled internet access compared to default options.
+Importance of Networking: Understanding networking is crucial as it forms the basis of most AWS architectures, even if you are using other compute services like AWS Lambda.
+
+
+
+
+Networking Definition: Networking connects computers globally, allowing them to communicate. An example is the AWS global infrastructure, which uses data centers, Availability Zones, and Regions.
+
+Networking Basics: Similar to sending a letter, networking requires three key pieces of information:
+
+The message (payload)
+Sender's address (From)
+Recipient's address (To)
+IP Addresses: Each computer has a unique IP address, similar to a home address, which is represented in binary format (0s and 1s).
+IPv4 Notation: IP addresses are typically shown in decimal format, grouped into octets (8 bits each), separated by periods (e.g., 192.168.1.1).
+CIDR Notation: Classless Inter-Domain Routing (CIDR) notation specifies a range of IP addresses. It starts with an IP address followed by a slash and a number indicating fixed bits. For example, 192.168.1.0/24 indicates the first 24 bits are fixed, allowing for 256 addresses.
+
+
+
+CIDR notation is used to define the size of your network and the range of IP addresses available for your resources. Here’s how you can apply CIDR notation in AWS:
+VPC Creation: When creating a Virtual Private Cloud (VPC), you specify a CIDR block (e.g., 192.168.0.0/16). This defines the range of IP addresses for the VPC.
+Subnetting: You can create subnets within your VPC using CIDR notation. For example, if your VPC is 192.168.0.0/16, you might create a subnet with a CIDR block of 192.168.1.0/24, which allows for 256 IP addresses.
+Security Groups and Network ACLs: CIDR notation is also used in security groups and network access control lists (ACLs) to specify which IP addresses are allowed or denied access to your resources.
+Elastic IPs: When allocating Elastic IP addresses, you can specify CIDR ranges to manage public IP addresses effectively.
+
+
+CIDR notation directly affects network size in AWS by determining the number of available IP addresses within a specified range. Here’s how it works:
+Fixed Bits: The number after the slash (e.g., /24) indicates how many bits are fixed in the IP address. The more bits that are fixed, the fewer addresses are available for use. For example:
+/24: 256 total IP addresses (2^8) - 1 for the network address and 1 for the broadcast address, leaving 254 usable addresses.
+/16: 65,536 total IP addresses (2^16) - 1 for the network address and 1 for the broadcast address, leaving 65,534 usable addresses.
+Smaller CIDR Notation: A smaller number (e.g., /28) means a smaller network size, providing fewer IP addresses (16 total, with 14 usable).
+Larger CIDR Notation: A larger number (e.g., /8) means a larger network size, providing more IP addresses (16,777,216 total, with 16,777,214 usable).
+AWS Limits: AWS has limits on the size of VPCs and subnets, so understanding CIDR notation helps you design your network architecture effectively to fit within these limits.

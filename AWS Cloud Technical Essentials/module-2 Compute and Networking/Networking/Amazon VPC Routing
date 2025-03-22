@@ -1,0 +1,25 @@
+Amazon VPC (Virtual Private Cloud) and its routing components. Here are the key points:
+
+VPC Structure: The VPC has an internet gateway and four subnets (two public and two private) across two availability zones.
+Routing Traffic: To direct internet traffic to the correct subnet, route tables are used. These tables contain rules (routes) that determine where network traffic is directed.
+Main Route Table: When a new VPC is created, AWS automatically generates a main route table that allows local traffic between all subnets.
+Custom Route Tables: For more specific routing, custom route tables can be created. Public subnets need a route to the internet gateway to allow internet access, while private subnets do not.
+Configuration Steps: The lecture includes a demonstration of creating a custom route table for public subnets and associating it with the appropriate subnets.
+
+
+
+The purpose of route tables in a VPC (Virtual Private Cloud) is to control the flow of network traffic within the VPC and to external networks. Here are the key functions:
+Direct Traffic: Route tables contain a set of rules (routes) that determine how traffic is directed. They specify where packets of data should go based on their destination IP addresses.
+Subnet Association: Each subnet in a VPC can be associated with a route table. This allows for granular control over how traffic is routed to and from that subnet.
+Internet Access: For public subnets, route tables include routes to the internet gateway, enabling resources within those subnets to communicate with the internet.
+Local Communication: By default, route tables allow local traffic between all subnets within the VPC, facilitating communication among resources.
+
+
+
+Main Route Table: When you create a VPC (Virtual Private Cloud) in AWS, a main route table is automatically created. This table contains routes that direct network traffic, allowing communication between subnets by default.
+
+Custom Route Tables: You can create custom route tables for more specific routing needs. Associating a custom route table with a subnet overrides the main route table for that subnet.
+
+Network ACLs: Network Access Control Lists (ACLs) act as a firewall at the subnet level, allowing you to control traffic entering or leaving a subnet. The default ACL allows all traffic, but you can set rules to restrict it.
+
+Security Groups: Security groups are firewalls for EC2 instances, blocking all inbound traffic by default while allowing outbound traffic. They are stateful, meaning they remember the state of connections, allowing responses to be sent without modifying rules.

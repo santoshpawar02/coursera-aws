@@ -1,0 +1,12 @@
+Employee Directory Application being launched on an Amazon EC2 instance within a public subnet of an Amazon VPC. The lecture outlines several key configurations to check if the application is not loading as expected:
+
+Internet Gateway: Ensure an Internet Gateway is attached to your VPC.
+Route Tables: Verify the route table has a route to 0.0.0.0/0 pointing to the Internet Gateway.
+Security Groups: Check inbound rules for HTTP (port 80) and/or HTTPS (port 443) traffic.
+Network Access Control Lists (NACLs): Ensure they allow inbound and outbound traffic for HTTP and HTTPS. Unlike security groups, NACLs are stateless, so you must explicitly allow both inbound and outbound rules.
+Public IP Address: Confirm the EC2 instance has a public IP assigned.
+HTTP vs HTTPS: Make sure the application is accessed via the correct protocol.
+User Data Script: Verify the user data script ran successfully.
+Permissions: Check IAM roles and policies attached to the instance.
+Personal Network Permissions: Ensure your network does not block access to the public IP.
+Application: Confirm the application code is correctly deployed and running.
