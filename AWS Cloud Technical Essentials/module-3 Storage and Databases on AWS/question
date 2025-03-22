@@ -1,0 +1,90 @@
+Question 1: For transcoding large media files using AWS Lambda, Amazon S3 is the recommended storage service due to its durability and ability to store large files for at least a year.
+
+Question 2: For an e-commerce MySQL database needing fast and durable storage, Amazon EBS is the best choice, as it provides the necessary persistence for order and customer data.
+
+Question 3: For temporary data storage during calculations in a web application, EC2 instance store is preferred due to its speed and cost-effectiveness, as durability is not a concern.
+
+Bonus Question: For a WordPress site on multiple instances requiring shared storage, Amazon Elastic File System (EFS) is the ideal option, as it allows multiple instances to access the same file system.
+<!-- ----------------------------------------------------------------------- -->
+<!--                           real life questions                           -->
+<!-- ----------------------------------------------------------------------- -->
+Real-Life Example: Video Streaming Service
+
+Scenario: Imagine you are working for a video streaming company that allows users to upload and share videos. The company wants to implement a feature that automatically transcodes uploaded videos into various formats and resolutions to ensure compatibility across different devices.
+
+Use of AWS Lambda: The company uses AWS Lambda functions to handle the transcoding process. When a user uploads a video, a Lambda function is triggered to process the file.
+
+Storage Solution: 
+
+Amazon S3 is chosen to store both the original and transcoded video files.
+This is because S3 provides a highly durable and scalable storage solution, allowing the company to store large video files for at least a year, as required by regulations.
+Benefits:
+Scalability: As the number of users grows, S3 can easily scale to accommodate the increasing volume of video uploads.
+Cost-Effectiveness: The company only pays for the storage they use, making it a cost-effective solution for handling large media files.
+Durability: S3 ensures that the videos are stored safely and can be retrieved whenever needed, providing peace of mind for both the company and its users.
+<!-- ----------------------------------------------------------------------- -->
+<!--         How can AWS Lambda enhance media transcoding processes?         -->
+<!-- ----------------------------------------------------------------------- -->
+
+AWS Lambda can significantly enhance media transcoding processes in several ways:
+
+Key Benefits of Using AWS Lambda for Media Transcoding:
+
+Serverless Architecture:
+
+No Server Management: With AWS Lambda, you don't need to provision or manage servers. This allows your team to focus on developing the transcoding logic rather than worrying about infrastructure.
+Automatic Scaling:
+
+On-Demand Execution: Lambda automatically scales to handle the number of incoming video uploads. If multiple users upload videos simultaneously, Lambda can run multiple instances of the transcoding function concurrently.
+Cost Efficiency:
+
+Pay-as-You-Go: You only pay for the compute time you consume. If there are no uploads, you incur no costs, making it a cost-effective solution for variable workloads.
+Event-Driven Processing:
+
+Trigger-Based Execution: Lambda can be triggered by events, such as an upload to Amazon S3. This means that as soon as a video is uploaded, the transcoding process can start automatically without manual intervention.
+Integration with Other AWS Services:
+
+Seamless Workflow: Lambda integrates easily with other AWS services like S3 (for storage), SNS (for notifications), and DynamoDB (for metadata storage), allowing for a smooth workflow from upload to transcoding to storage.
+Flexibility in Transcoding:
+Multiple Formats and Resolutions: You can configure Lambda functions to transcode videos into various formats and resolutions, ensuring compatibility across different devices and platforms.
+Example Workflow:
+
+User Uploads Video: A user uploads a video file to an S3 bucket.
+Trigger Lambda Function: The upload event triggers an AWS Lambda function.
+Transcoding Process: The Lambda function processes the video, transcoding it into the desired formats and resolutions.
+Store Transcoded Files: The transcoded files are saved back to S3 for distribution.
+Notify User: Optionally, a notification can be sent to the user once the transcoding is complete.
+By leveraging AWS Lambda, organizations can create efficient, scalable, and cost-effective media transcoding solutions that enhance user experience and streamline operations. 
+<!-- ----------------------------------------------------------------------- -->
+<!--          What is the role of AWS Lambda in media transcoding?           -->
+<!-- ----------------------------------------------------------------------- -->
+
+AWS Lambda plays a crucial role in media transcoding by providing a serverless computing environment that automates and streamlines the transcoding process. Here are the key roles it fulfills:
+
+Key Roles of AWS Lambda in Media Transcoding:
+
+Event-Driven Execution:
+
+Automatic Triggering: AWS Lambda can be triggered by events, such as the upload of a media file to Amazon S3. This means that as soon as a video is uploaded, the transcoding process can begin without manual intervention.
+Scalability:
+
+On-Demand Resources: Lambda automatically scales to handle varying workloads. If multiple videos are uploaded simultaneously, Lambda can run multiple instances of the transcoding function concurrently, ensuring timely processing.
+Cost Efficiency:
+
+Pay-Per-Use Model: You only pay for the compute time used during the transcoding process. This model is cost-effective, especially for workloads that can fluctuate significantly.
+Integration with Other AWS Services:
+
+Seamless Workflow: Lambda integrates easily with other AWS services, such as S3 for storage, SNS for notifications, and Elastic Transcoder or AWS Elemental MediaConvert for advanced transcoding tasks. This allows for a smooth and efficient workflow.
+Flexibility in Processing:
+
+Custom Transcoding Logic: You can write custom code in Lambda to define how the transcoding should be performed, including specifying formats, resolutions, and other processing parameters.
+Reduced Latency:
+Quick Processing: Since Lambda functions can execute quickly, they help reduce the overall latency in the transcoding process, allowing users to access their media files sooner.
+Example Workflow:
+
+Upload: A user uploads a video to an S3 bucket.
+Trigger: The upload event triggers an AWS Lambda function.
+Transcoding: The Lambda function processes the video, converting it into the required formats and resolutions.
+Storage: The transcoded files are saved back to S3 for access.
+Notification: Optionally, a notification is sent to the user once the transcoding is complete.
+By utilizing AWS Lambda, organizations can create efficient, scalable, and cost-effective media transcoding solutions that enhance user experience and streamline operations. 

@@ -1,0 +1,33 @@
+employee directory application being built, which tracks employee data such as name, location, job title, and badges. Key points include:
+
+The application allows for adding, viewing, editing, and deleting employees.
+Data will be stored in a database, specifically using Amazon Relational Database Service (RDS).
+Relational databases are commonly used across industries, and RDBMS helps manage these databases.
+You can run databases on Amazon EC2, but this requires managing the database engine and server tasks.
+Using Amazon RDS simplifies operations as AWS handles maintenance tasks like patching and upgrades, allowing you to focus on database creation and optimization.
+
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                       Exploring Databases on AWS:                       -->
+<!-- ----------------------------------------------------------------------- -->
+
+History of Enterprise Databases: Choosing a database used to be simpler, often selecting a relational database without fully understanding the use case. Since the 1970s, relational databases have been the most common choice.
+
+Relational Database: Organizes data into tables with rows (records) and columns (attributes). Relationships between tables are established through common columns, forming a logical schema.
+
+Relational Database Management System (RDBMS): Allows for the creation, updating, and administration of relational databases. Common examples include MySQL, PostgreSQL, and Oracle. SQL is used for querying data.
+
+Benefits of Relational Databases:
+
+Joins: Understand relationships between data.
+Reduced redundancy: Store data in one place and reference it elsewhere.
+Familiarity: Widely used and understood by technical professionals.
+Accuracy: Adheres to the ACID principles for data integrity.
+Use Cases: Ideal for applications with stable schemas, such as ERP and CRM systems.
+
+Managed vs. Unmanaged Databases on AWS:
+Unmanaged: You manage the database on EC2, while AWS handles the infrastructure.
+Managed: AWS manages both the infrastructure and the database setup, providing convenience but less control.
+
+![alt text](image-1.png)
