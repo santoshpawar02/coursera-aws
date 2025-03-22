@@ -1,0 +1,7 @@
+instructor demonstrates how to create a Virtual Private Cloud (VPC) in AWS. The steps include:
+
+Creating a VPC: The instructor names the VPC "app-vpc" and assigns it a CIDR range of 10.1.0.0/16.
+Creating Subnets: Four subnets are created, two public and two private, across two availability zones (us-west-2a and us-west-2b) with non-overlapping CIDR ranges.
+Creating an Internet Gateway: An internet gateway named "app-igw" is created and attached to the VPC.
+Configuring Route Tables: A route table is created for public subnets, allowing internet traffic through the internet gateway.
+Launching an Application: The instructor relaunches the Employee Directory application in the new VPC, ensuring it is accessible via a public IP address.
