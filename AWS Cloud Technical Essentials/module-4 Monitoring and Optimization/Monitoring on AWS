@@ -1,0 +1,62 @@
+importance of monitoring in cloud solutions, particularly in AWS. Here are the key points:
+
+Operational Awareness: It's crucial to monitor services to identify issues before users report them, ensuring a better user experience.
+Monitoring as a Process: Monitoring involves collecting metrics, logs, and network traffic to understand system performance.
+Metrics and Statistics: Metrics are data points (e.g., CPU utilization), while statistics are metrics monitored over time.
+Data Collection: Different services generate various metrics, such as CPU usage from EC2 instances and connection counts from databases.
+Baseline Establishment: Collected data helps establish a baseline for normal operations, allowing for alerts when deviations occur.
+Centralized Monitoring: A good monitoring solution consolidates data, enabling proactive management and automated responses to issues.
+Amazon CloudWatch: This tool is highlighted as a solution for monitoring AWS services, providing a centralized view of metrics from various components.
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--        How can you establish a baseline for system performance?         -->
+<!-- ----------------------------------------------------------------------- -->
+
+To establish a baseline for system performance, you can follow these steps:
+
+Collect Historical Data:
+
+Gather metrics over a period of time (e.g., CPU usage, memory utilization, network traffic).
+Use monitoring tools like Amazon CloudWatch to automate data collection.
+Identify Normal Operating Conditions:
+
+Analyze the collected data to determine typical performance levels during different times (e.g., peak vs. off-peak hours).
+Look for patterns and trends in the data.
+Define Performance Metrics:
+
+Choose key performance indicators (KPIs) relevant to your application (e.g., response time, error rates).
+Ensure these metrics align with user expectations and business goals.
+Set Thresholds:
+
+Establish acceptable ranges for each metric based on historical data.
+Define thresholds that, when exceeded, will trigger alerts for potential issues.
+Regularly Review and Update:
+Continuously monitor performance and adjust the baseline as necessary, especially after significant changes (e.g., new deployments, infrastructure changes).
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                            Monitoring on AWS                            -->
+<!-- ----------------------------------------------------------------------- -->
+
+When operating a website like the Employee Directory Application on AWS you may have questions like:
+How many people are visiting my site day to day?
+How can I track the number of visitors over time?
+How will I know if the website is having performance or availability issues?
+What happens if my Amazon Elastic Compute Cloud (EC2) instance runs out of capacity?
+Will I be alerted if my website goes down?
+
+monitoring in the context of operating a website, specifically using AWS services. Here are the key points:
+
+Monitoring Definition: The act of collecting and analyzing data about the operational health and usage of IT resources.
+Importance of Monitoring:
+Provides insights into visitor traffic and performance issues.
+Helps identify operational problems like resource over-utilization or security threats.
+Metrics: Data points collected from resources (e.g., CPU utilization, network performance) that help evaluate system health.
+Types of Metrics: Different AWS resources generate different metrics (e.g., EC2 instances track CPU and memory, while S3 tracks object size and request counts).
+Benefits of Monitoring:
+Proactive issue resolution.
+Improved performance and reliability.
+Recognition of security threats.
+Data-driven business decisions.
+Cost optimization.
+Amazon CloudWatch: A service that centralizes monitoring data, allowing for anomaly detection, alerting, and performance visualization.

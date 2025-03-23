@@ -1,0 +1,87 @@
+Amazon CloudWatch and its features. Here’s a brief summary:
+
+Dashboard Creation: The lecture demonstrates how to create a customizable dashboard in CloudWatch to monitor the CPU utilization of an EC2 instance over time. This dashboard allows for a consolidated view of various metrics.
+
+Metrics and Monitoring: AWS services automatically send metrics to CloudWatch. The example highlights selecting the CPU utilization metric for the EC2 instance.
+
+Custom Metrics: While default metrics provide some insights, custom metrics can be reported programmatically for a more comprehensive view of application health.
+
+CloudWatch Alarms: The lecture explains how to set up alarms that trigger notifications when CPU utilization exceeds a specified threshold (e.g., 70% for five minutes). This involves using Amazon Simple Notification Service (SNS) to send alerts to designated email addresses.
+This session emphasizes the importance of monitoring and alerting to maintain application performance and health. 
+
+<!-- ----------------------------------------------------------------------- -->
+<!--    What would happen if CPU utilization exceeds the alarm threshold?    -->
+<!-- ----------------------------------------------------------------------- -->
+
+If the CPU utilization exceeds the alarm threshold set in Amazon CloudWatch, the following actions typically occur:
+
+Alarm State Change: The alarm transitions from the OK state to the ALARM state, indicating that the monitored metric has crossed the defined threshold (e.g., 70% for five minutes).
+
+Notification Trigger: If configured, the alarm can trigger notifications through Amazon Simple Notification Service (SNS). This means that an alert will be sent to the specified email address or other endpoints, informing the relevant team members that the CPU utilization is high.
+
+Automated Actions: Depending on the setup, additional automated actions can be taken, such as scaling resources, executing scripts, or triggering other AWS services to address the issue.
+This mechanism helps ensure that system administrators or developers are promptly informed of potential performance issues, allowing them to take necessary actions to maintain application health.
+
+<!-- ----------------------------------------------------------------------- -->
+<!--              customize CloudWatch metrics for application               -->
+<!-- ----------------------------------------------------------------------- -->
+
+Create Custom Metrics:
+
+Use the AWS SDKs or AWS CLI to publish custom metrics to CloudWatch. This allows you to send specific data points that are relevant to your application.
+For example, you might want to track application-specific metrics like request counts, error rates, or latency.
+Define Metric Names and Dimensions:
+
+When publishing custom metrics, you can define metric names and dimensions. Dimensions are key-value pairs that help you categorize and filter your metrics.
+For instance, you could use dimensions to differentiate metrics by application version or environment (e.g., production vs. staging).
+Use the CloudWatch Agent:
+
+Install and configure the CloudWatch Agent on your EC2 instances or on-premises servers. This agent can collect system-level metrics (like memory and disk usage) and custom application metrics.
+Set Up Alarms for Custom Metrics:
+
+Once your custom metrics are published, you can create CloudWatch alarms based on these metrics. This allows you to monitor specific thresholds and receive notifications when they are breached.
+Visualize Custom Metrics:
+Add your custom metrics to CloudWatch dashboards for visualization. This helps you monitor the performance and health of your application in real-time.
+By customizing CloudWatch metrics, you gain deeper insights into your application's performance and can respond proactively to issues.
+
+<!-- ----------------------------------------------------------------------- -->
+<!--           What would happen if you didn't use custom metrics?           -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+If you don't use custom metrics in Amazon CloudWatch, the following consequences may arise:
+
+Limited Visibility:
+
+You will only have access to the default metrics provided by AWS services. This may not give you a complete picture of your application's performance or health, as these metrics may not capture application-specific behaviors or issues.
+Inability to Monitor Key Performance Indicators (KPIs):
+
+Without custom metrics, you may miss tracking important KPIs that are critical for your application's success, such as user engagement, transaction counts, or error rates.
+Delayed Response to Issues:
+
+Relying solely on default metrics may lead to delayed detection of performance issues. For example, if your application experiences high latency or errors that are not reflected in the default metrics, you may not be alerted in time to take corrective action.
+Less Effective Resource Management:
+
+Custom metrics can help you make informed decisions about scaling resources. Without them, you may either over-provision or under-provision resources, leading to increased costs or degraded performance.
+Reduced Ability to Optimize:
+Custom metrics allow for more granular monitoring and analysis, enabling you to optimize your application effectively. Without them, you may miss opportunities for performance improvements.
+In summary, not using custom metrics can limit your ability to monitor, manage, and optimize your application effectively, potentially leading to performance issues and increased operational costs.
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                          how CloudWatch works:                          -->
+<!-- ----------------------------------------------------------------------- -->
+
+Overview: CloudWatch is a managed service that allows you to monitor AWS resources without managing infrastructure. It centralizes metrics from various AWS services.
+
+Metrics: Different AWS services send metrics to CloudWatch automatically, providing basic monitoring for free. For more detailed monitoring, you can enable detailed monitoring for an additional fee.
+
+Custom Metrics: You can create custom metrics for application-specific data, such as page views or error rates, using the PutMetricData API.
+
+Dashboards: CloudWatch allows you to visualize metrics through customizable dashboards, which can aggregate data from different regions.
+
+Logs: CloudWatch Logs can store and analyze log files from various sources, allowing you to query and filter log data.
+
+Alarms: You can set up alarms to trigger actions based on metric thresholds, helping to prevent and troubleshoot issues.
+
+Terminology: Key terms include log events, log streams, and log groups, which help organize and manage log data.
