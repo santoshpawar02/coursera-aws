@@ -34,3 +34,18 @@ Inability to Enforce Data Integrity: Primary keys help maintain data integrity b
 Performance Degradation: DynamoDB is optimized for primary key access. Not using them would hinder the database's performance, as it relies on keys to quickly locate and manage data.
 In summary, primary keys are crucial for the effective functioning of DynamoDB, ensuring unique identification, efficient data retrieval, and maintaining data integrity. 
 
+<!-- ----------------------------------------------------------------------- -->
+<!--                      Database Types and Use Cases:                      -->
+<!-- ----------------------------------------------------------------------- -->
+
+AWS Database Services, highlighting the various database options available on AWS for different use cases. Here's a brief summary:
+
+Relational: For traditional applications like ERP and CRM (e.g., Amazon RDS, Amazon Aurora).
+Key-value: Suitable for high-traffic web apps (e.g., Amazon DynamoDB).
+In-memory: Used for caching and session management (e.g., Amazon ElastiCache).
+Document: For content management and user profiles (e.g., Amazon DocumentDB).
+Wide column: For high-scale industrial applications (e.g., Amazon Keyspaces).
+Graph: For fraud detection and social networking (e.g., Amazon Neptune).
+Time series: For IoT applications (e.g., Amazon Timestream).
+Ledger: For systems of record (e.g., Amazon QLDB).
+Breaking Up Applications and Databases: The trend is moving towards smaller services with purpose-built databases, allowing for a more tailored approach rather than a one-size-fits-all solution.
