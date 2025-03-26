@@ -19,3 +19,54 @@ Types:
 Active-Active: All components are operational and share the load.
 Active-Passive: One component is active while the other is on standby, ready to take over if the active one fails.
 By implementing redundancy, organizations can enhance the reliability and resilience of their infrastructure. 
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                    Real-life examples of redundancy                     -->
+<!-- ----------------------------------------------------------------------- -->
+
+in infrastructure that can help you understand its importance and application:
+
+Data Centers:
+
+Many companies operate multiple data centers in different geographical locations. If one data center experiences a failure (like a power outage), the other can continue to serve users, ensuring that services remain available.
+Web Hosting:
+
+A popular website may use multiple web servers to host its content. If one server goes down, traffic is automatically redirected to another server, preventing downtime and maintaining user access.
+Cloud Services:
+
+Cloud providers like AWS offer redundancy by allowing users to deploy applications across multiple availability zones. For instance, if an application is hosted in two different AZs, if one zone fails, the application can still run in the other zone.
+Network Infrastructure:
+
+Businesses often use redundant internet connections from different service providers. If one connection fails, the other can take over, ensuring continuous internet access for operations.
+Power Supply:
+Critical systems, such as hospitals, often have backup generators. If the main power supply fails, the generator kicks in, ensuring that essential services remain operational.
+These examples illustrate how redundancy is crucial in various industries to enhance reliability and ensure continuous service availability.
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                         Availability in systems                         -->
+<!-- ----------------------------------------------------------------------- -->
+The current content discusses availability in systems, expressed as a percentage of uptime or in "nines." Here’s a summary of key points:
+
+Availability Percentages and Downtime:
+
+90% (one nine): 36.53 days of downtime
+99% (two nines): 3.65 days
+99.9% (three nines): 8.77 hours
+99.95% (three and a half nines): 4.38 hours
+99.99% (four nines): 52.60 minutes
+99.995% (four and a half nines): 26.30 minutes
+99.999% (five nines): 5.26 minutes
+Increasing Availability:
+
+Requires redundancy, which involves more infrastructure (data centers, servers, databases).
+Balancing cost and customer demand for availability is crucial.
+Single Point of Failure:
+
+A single EC2 instance can lead to downtime. Adding a second instance in a different Availability Zone can mitigate this risk.
+Challenges with Multiple Servers:
+Replication: Automate the process of replicating configurations and applications.
+Client Redirection: Use DNS or load balancers to manage client requests effectively.
+Types of High Availability:
+Active-Passive: Only one instance is active at a time.
+Active-Active: Both instances are active, allowing for better scalability but may require stateless applications.
