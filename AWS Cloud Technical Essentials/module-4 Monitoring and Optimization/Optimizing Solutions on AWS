@@ -1,0 +1,9 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--       Enhance the availability and scalability of infrastructure.       -->
+<!-- ----------------------------------------------------------------------- -->
+Key points include:
+Redundancy: To prevent downtime, you should have multiple instances of your application in different availability zones (AZs).
+Scaling: You can scale your instances either vertically (increasing the size of existing instances) or horizontally (adding more instances). Horizontal scaling is more flexible as it allows for adding many instances without upper limits.
+Automation: Amazon EC2 Auto Scaling can automate the process of adding and removing instances based on defined conditions, maintaining the health of your fleet.
+Load Balancing: With multiple instances, a load balancer is used to distribute incoming requests across the instances, simplifying access without needing to manage multiple IP addresses.
+This approach ensures that your application remains available and can handle increased demand efficiently. 
