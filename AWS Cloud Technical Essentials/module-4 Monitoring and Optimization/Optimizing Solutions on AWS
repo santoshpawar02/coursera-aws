@@ -7,3 +7,15 @@ Scaling: You can scale your instances either vertically (increasing the size of 
 Automation: Amazon EC2 Auto Scaling can automate the process of adding and removing instances based on defined conditions, maintaining the health of your fleet.
 Load Balancing: With multiple instances, a load balancer is used to distribute incoming requests across the instances, simplifying access without needing to manage multiple IP addresses.
 This approach ensures that your application remains available and can handle increased demand efficiently. 
+<!-- ----------------------------------------------------------------------- -->
+<!--                  What is redundancy in infrastructure?                  -->
+<!-- ----------------------------------------------------------------------- -->
+
+Redundancy in infrastructure refers to the practice of having multiple components or systems in place to ensure that if one fails, others can take over, thereby maintaining service availability. Here are the key aspects:
+
+Purpose: The main goal of redundancy is to prevent downtime and ensure continuous operation of services.
+Implementation: This can be achieved by duplicating critical components, such as servers, databases, or network paths, often located in different availability zones (AZs) to avoid single points of failure.
+Types:
+Active-Active: All components are operational and share the load.
+Active-Passive: One component is active while the other is on standby, ready to take over if the active one fails.
+By implementing redundancy, organizations can enhance the reliability and resilience of their infrastructure. 
