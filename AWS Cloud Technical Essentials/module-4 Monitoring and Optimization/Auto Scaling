@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--            EC2 Auto Scaling in AWS. Here are the key points:            -->
+<!-- ----------------------------------------------------------------------- -->
+
+Demand Increase: As application traffic grows, the existing EC2 instances may not handle the load, necessitating the addition of more instances.
+Auto Scaling: This feature allows for automatic provisioning of EC2 instances based on set thresholds monitored by CloudWatch.
+Launch Template: A launch template is created to define the configuration for the EC2 instances, ensuring they are identical.
+Auto Scaling Group: An auto-scaling group is set up to manage when and how many instances to launch, with minimum and maximum instance limits defined.
+Scaling Policies: Policies are established to trigger scaling actions based on CPU utilization or other metrics.
+Stress Testing: A stress test is conducted to simulate load, which triggers the auto-scaling policy to add instances as needed.
+Monitoring: CloudWatch monitors the CPU utilization, and when it exceeds a threshold, new instances are launched to handle the increased demand.
+This setup allows for horizontal scalability, ensuring the application can handle varying loads efficiently. 
+
+<!-- ----------------------------------------------------------------------- -->
+<!--            EC2 Auto Scaling in AWS. Here are the key points:            -->
+<!-- ----------------------------------------------------------------------- -->
+
+EC2 Auto Scaling in the context of a web application that you might encounter in your role as a systems engineer, especially as you aim to transition into a DevOps engineer.
+
+Example: E-commerce Website During a Sale
+
+Scenario: Imagine an e-commerce website that experiences a significant increase in traffic during a holiday sale. Customers flock to the site to take advantage of discounts, leading to a surge in demand for server resources.
+
+Relevance: This situation is a perfect illustration of why EC2 Auto Scaling is essential. The website needs to handle the increased load without crashing or slowing down, ensuring a smooth shopping experience for customers.
+
+Step-by-Step Breakdown:
+
+Initial Setup: The e-commerce site is hosted on two EC2 instances. As the sale approaches, the team anticipates increased traffic.
+Launch Template Creation: A launch template is created to ensure that any new instances launched during the sale are identical to the existing ones, maintaining consistent performance.
+Auto Scaling Group Configuration: An auto-scaling group is set up with a minimum of two instances and a maximum of ten. This allows the system to scale up as needed.
+Monitoring with CloudWatch: CloudWatch is configured to monitor CPU utilization. If the CPU usage exceeds 70%, it triggers an alarm.
+Scaling Action: When the alarm is triggered, the auto-scaling group automatically launches additional EC2 instances to handle the increased traffic.
+Post-Sale Adjustment: After the sale ends and traffic decreases, the auto-scaling group gradually terminates the extra instances, scaling back down to the minimum of two, ensuring cost efficiency.
+Outcome: Thanks to EC2 Auto Scaling, the e-commerce site can handle the surge in traffic without downtime, providing a seamless shopping experience. The system automatically adjusts to demand, optimizing resource usage and costs.
+This example highlights the practical application of EC2 Auto Scaling in a real-world scenario, demonstrating its importance in maintaining application performance and reliability.
+
